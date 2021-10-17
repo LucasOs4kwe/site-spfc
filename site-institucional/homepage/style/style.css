@@ -7,7 +7,7 @@
     font-family: 'Open Sans', sans-serif;
 }
 body{
-    background-color: rgb(214, 214, 214);
+    background-color: rgb(38, 38, 38);
 }
 a{
     text-decoration: none;
@@ -62,7 +62,38 @@ ul{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    background-color: rgb(38, 38, 38);
+}
+.section-one .next-game h1{
+    margin-bottom: 30px;
+    color: white;
+    font-size: 50px;
+}
+.section-one .next-game{
+    text-align: center;
+}
+.section-one .confront-box img{
+    width: 150px;
+}
+.section-one .confront-box{
+    display: flex;
+    align-items: center;
     background-color: rgb(237, 58, 58);
+    padding: 50px;
+    border-radius: 12px;
+}
+.section-one .confront-box p{
+    margin: 0 50px 0 50px;
+    color: white;
+    font-size: 18px;
+}
+.btn{
+    padding: 10px;
+    margin-top: 5px;
+    font-size: 18px;
+    border-radius: 12px 0 0 12px;
+    border: none;
+    cursor: pointer;
 }
 
 .section-one .section-image2 img{
@@ -71,6 +102,7 @@ ul{
 
 .section-two{
     background-color: white;
+    height: 30vh;
 }
 .section-three{
     background-color: rgb(38, 38, 38);
