@@ -17,6 +17,7 @@ ul{
     padding-inline-start: 0;
     margin-block-end: 0;
     margin-block-start: 0;
+    overflow: hidden;
 }
 
 
@@ -48,7 +49,43 @@ ul{
 }
 .header .profile-login a i{
     font-size: 35px;
-    color: black;
+    color: rgb(255, 255, 255);
+}
+.active{
+    border-bottom: 3px solid rgb(237, 58, 58);
+}
+
+/* DROPDOWN */
+.navbar li a .dropbtn{
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li.dropdown{
+    display: inline-block;
+}
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: rgb(237, 58, 58);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content a{
+    color: rgb(255, 255, 255);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+.dropdown-content a:hover{
+    background-color: rgb(237, 58, 58);
+}
+.dropdown:hover .dropdown-content{
+    display: block;
 }
 
 /* CONTENT */
@@ -63,6 +100,8 @@ ul{
     align-items: center;
     justify-content: space-evenly;
     background-color: rgb(38, 38, 38);
+    border-bottom: 1px solid #000;
+    padding-bottom: 15px;
 }
 .section-one .next-game h1{
     margin-bottom: 30px;
@@ -88,21 +127,40 @@ ul{
     font-size: 18px;
 }
 .btn{
-    padding: 10px;
+    padding-left: 8px;
     margin-top: 5px;
     font-size: 18px;
-    border-radius: 12px 0 0 12px;
+    border-radius: 12px;
     border: none;
     cursor: pointer;
 }
+.buy-button .btn:hover > a:hover{
+    background-color: rgb(38, 38, 38);
+    color: rgb(255, 255, 255);
+}
 
+.btn a{
+    color: #000;
+}
+i .fas, .fa-arrow-right{
+    background-color: rgb(38, 38, 38);
+    color: white;
+    border-radius: 0 12px 12px 0;
+    font-size: inherit;
+    padding: 10px;
+    margin-left: 5px;
+}
 .section-one .section-image2 img{
-    width: 700px;
+    width: 500px;
 }
 
 .section-two{
     background-color: white;
-    height: 30vh;
+    height: fit-content;
+}
+.section-two .patrocinadores{
+    display: flex;
+    justify-content: center;
 }
 .section-three{
     background-color: rgb(38, 38, 38);
@@ -111,6 +169,7 @@ ul{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    border-top: 1px solid #000;
 }
 .section-three footer{
     display: flex;

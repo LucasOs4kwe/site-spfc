@@ -16,9 +16,16 @@
                         <img src="./assets/img/spfc-simbolo.png" alt="">
                     </div>
                     <nav class="navbar">
-                        <ul class="nav-list">
-                            <li class="navitem"><a href="#">Início</a></li>
-                            <li class="navitem"><a href="#">Institucional</a></li>
+                        <ul class="nav-list" id="nav-list">
+                            <li class="navitem active"><a href="#">Início</a></li>
+                            <li class="navitem dropdown">
+                                <a href="javascript:void(0)" class="dropbtn">Institucional</a>
+                                <div class="dropdown-content">
+                                    <a href="#">1</a>
+                                    <a href="#">2</a>
+                                    <a href="#">3</a>
+                                </div>
+                            </li>
                             <li class="navitem"><a href="#">Ingressos</a></li>
                             <li class="navitem"><a href="#">Elenco</a></li>
                             <li class="navitem"><a href="#">S.T</a></li>
@@ -40,7 +47,7 @@
                                     <p>Campeonato Brasileiro Série A</p>
                                     <p>Estádio Cícero Pompeu de Toledo - Morumbi<br> 18/10 - 20h00</p>
                                     <div class="buy-button">
-                                        <button class="btn">Comprar ingresso</button><i class="fas fa-arrow-right"></i>
+                                        <button class="btn"><a href="#">Comprar ingresso</a><i class="fas fa-arrow-right"></i></button>
                                     </div>
                                 </div>
                             </div>
@@ -50,14 +57,15 @@
                         </div>
                     </section>
                     <section class="section-two">
-                        <div>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad dolore temporibus dolores omnis, consectetur harum sit laudantium asperiores illo possimus explicabo quibusdam, molestiae optio. Assumenda consequuntur tempora eum saepe est!</div>
+                        
+                        <div class="patrocinadores"><img src="assets/img/sportsbet.io.png" alt=""></div>
                     </section>
                     <section class="section-three">
                         <div class="newsletter-box">
                             <h1>Newsletter</h1>
                             <p>Digite seu email para receber nosso newsletter</p>
                             <form action="">
-                                <label for=""><input type="email" required></label>
+                                <label for=""><input type="email" required placeholder="Email"></label>
                                 <button type="submit">Ok</button>
                             </form>
                         </div>
