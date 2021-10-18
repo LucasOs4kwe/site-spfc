@@ -70,6 +70,7 @@ li.dropdown{
     display: none;
     position: absolute;
     background-color: rgb(237, 58, 58);
+    border-radius: 12px;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
