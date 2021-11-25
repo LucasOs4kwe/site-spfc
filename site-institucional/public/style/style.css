@@ -257,3 +257,17 @@ footer .links{
 .img-footer img{
     width: 250px;
 }
+
+/* ESTILIZAÇÃO SCROLL BAR */
+
+/* ideia: fazer a scrollbar sumir quando não estiver sendo utilizada */
+body::-webkit-scrollbar{
+    width: 8px;
+}
+body::-webkit-scrollbar-thumb{
+    background-color: rgb(237, 58, 58);
+    border-radius: 20px;
+}
+body::-webkit-scrollbar-thumb:hover{
+    background-color: rgb(235, 42, 42);
+}
