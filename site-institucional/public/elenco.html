@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="css/elenco.css">
+        <title>Elenco</title>
+    </head>
+    <body>
+        <div id="page-container">
+            <header class="header">
+                <div id="img-header">
+                    <img src="./assets/img/spfc-simbolo.png" alt="">
+                </div>
+                <nav class="navbar">
+                    <ul class="nav-list" id="nav-list">
+                        <li class="navitem"><a href="index.html">Início</a></li>
+                        <li class="navitem dropdown"><a href="#">Institucional</a></li>
+                        <li class="navitem"><a href="#">Ingressos</a></li>
+                        <li class="navitem active"><a href="elenco.html">Elenco</a></li>
+                        <li class="navitem"><a href="#">S.T</a></li>
+                        <li class="navitem"><a href="dashboard/dash.html">Análises</a></li>
+                    </ul>
+                </nav>
+                <div class="profile-login">
+                    <a href=""><i class="fas fa-user-circle"></i></a>
+                </div>
+            </header>
+
+            <main class="main-content">
+                <section class="players">
+                    <div class="select-box">
+                        <select name="" id="setor_slct" onchange="">
+                            <option value="" selected>Todos</option>
+                            <option value="">Atacantes</option>
+                            <option value="">Meio campistas</option>
+                            <option value="">Defensores</option>
+                        </select>
+                    </div>
+                    <h1>Elenco completo</h1>
+                    <div class="box-players">
+                        <div id="atacantes">
+                            <div class="player-box">
+                                <img src="" alt="">
+                            </div>    
+                            <div class="player-box">
+                                <h1>E. Rigoni</h1>
+                            </div>
+                        </div>
+                        <div id="meio-campistas">
+                            <div class="player-box"></div>
+                        </div>
+                        <div id="defensores">
+                            <div class="player-box"></div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </body>
+</html>
