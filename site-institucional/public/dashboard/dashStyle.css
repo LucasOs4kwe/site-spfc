@@ -229,3 +229,17 @@ li.dropdown{
 {
     display: none;
 }
+
+/* DASH */
+#conteudo{
+    position: absolute;
+    outline: 1px solid #fff;
+    height: 60vh;
+    top: 25%;
+    width: 50vw;
+    left: 20vw;
+    margin-left: 5vw;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
