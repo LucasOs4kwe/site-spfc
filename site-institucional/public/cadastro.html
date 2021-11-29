@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="css/cadastro.css">
+        <title>SPFCStats Cadastro</title>
+    </head>
+    <body>
+        <div id="container-page">
+            <div id="container-login">
+
+                <div class="container-form">
+                    <div id="form">
+                        <img src="assets/img/spfc-simbolo.png" alt="">
+                        <div class="div-organization">
+                            <div id="left-div">
+                                Nome
+                                <input type="text" id="nome_input" placeholder="ex: rogerio">
+                                Email
+                                <input type="email" id="email_input" placeholder="rogerio@xxxx.com">
+                                Senha
+                                <input type="password" id="senha_input" placeholder="********">
+                            </div>
+                            <div id="right-div">
+                                Confirmação de senha
+                                <input type="password" placeholder="********" id="confirmacao_senha_input">
+                                Data de nascimento
+                                <input type="date" id="bornDate_input">
+                                <div class="select-box">
+                                    Jogador favorito
+                                    <select name="" id="organizada_slct">
+                                        <option value="null" selected>Nenhum</option>
+                                        <option value="1">Luciano</option>
+                                        <option value="2">Jonathan Calleri</option>
+                                        <option value="3">Éder</option>
+                                        <option value="4">Pablo</option>
+                                        <option value="5">Galeano</option>
+                                        <option value="6">Emiliano Rigoni</option>
+                                        <option value="7">Martín Benítez</option>
+                                        <option value="8">Igor Gomes</option>
+                                        <option value="9">Luan</option>
+                                        <option value="10">Gabriel Sara</option>
+                                        <option value="11">Gabriel Neves</option>
+                                        <option value="12">Liziero</option>
+                                        <option value="13">Rodrigo Nestor</option>
+                                        <option value="14">Vitor Bueno</option>
+                                        <option value="15">Shaylon</option>
+                                        <option value="16">Talles Costa</option>
+                                        <option value="17">Wellington</option>
+                                        <option value="18">William</option>
+                                        <option value="19">Miranda</option>
+                                        <option value="20">Robert Arboleda</option>
+                                        <option value="21">Reinaldo</option>
+                                        <option value="22">Luis Orejuela</option>
+                                        <option value="23">Bruno Alves</option>
+                                        <option value="24">Diego Costa</option>
+                                        <option value="25">Igor Vinícius</option>
+                                        <option value="26">Léo</option>
+                                        <option value="27">Walce</option>
+                                        <option value="28">Rodrigo Freitas</option>
+                                        <option value="29">Tiago Volpi</option>
+                                        <option value="30">Lucas Perri</option>
+                                        <option value="31">Thiago Couto</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="select-box">
+                            Torcida organizada favorita
+                            <select name="" id="jogadorFav_slct">
+                                <option value="null" selected>Nenhuma</option>
+                                <option value="1">Torcida Independente</option>
+                                <option value="2">Dragões da Real</option>
+                                <option value="3">Falange Tricolor</option>
+                                <option value="4">Comando Metal Tricolor</option>
+                                <option value="5">Pantera Tricolor</option>
+                                <option value="6">Caveira Tricolor</option>
+                                <option value="7">Coração Tricolor</option>
+                            </select>
+                        </div>
+                        <div id="bottom-form">
+                            <input type="button" value="Cadastrar" onclick="cadastrar();">
+                        </div>
+                    </div>
+                </div>
+                <a href="login.html"><p>Já tem conta? Faça login!</p></a>
+                <a href="index.html"><p>Início</p></a>
+            </div>
+            <div id="container-image">
+                <img src="assets/img/morumbi-inside.jpg" alt="">
+            </div>
+        </div>
+    </body>
+</html>
+<script>
+    function cadastrar() {
+
+        var nomeVar = nome_input.value;
+        var emailVar = email_input.value;
+        var senhaVar = senha_input.value;
+        var dataNascimentoVar = bornDate_input.value;
+        var jogadorFavVar = jogadorFav_slct.value;
+        var organizadaVar = organizada_slct.value;
+        var confirmacaoSenhaVar = confirmacao_senha_input.value;
+
+        if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "" || dataNascimentoVar == "") {
+
+            window.alert("Preencha todos os campos para prosseguir!");
+            if (nomeVar == "") {
+                console.log('nome está em branco')
+            }
+            if (emailVar == "") {
+                console.log('email está em branco')
+            }
+            if (senhaVar == "") {
+                console.log('senha está em branco')
+            }
+            if (confirmacaoSenhaVar == "") {
+                console.log('confirmacaoSenha está em branco')
+            }
+            if(dataNascimentoVar == ""){
+                console.log('Data de nascimento em branco')
+            }
+            return false;
+        }
+
+        if (emailVar.indexOf("@") == -1 || emailVar.indexOf(".com") == -1) {
+            window.alert("Ops, e-mail inválido! Verifique e tente novamente.");
+            finalizarAguardar();
+            return false;
+        }
+
+        if (senhaVar != confirmacaoSenhaVar) {
+            window.alert("As senhas inseridas devem ser iguais para prosseguir!");
+            finalizarAguardar();
+            return false;
+        }
+
+        fetch("/usuarios/cadastrar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                nomeServer: nomeVar,
+                emailServer: emailVar,
+                senhaServer: senhaVar,
+                dataNascimentoServer: dataNascimentoVar,
+                organizadaServer: organizadaVar,
+                jogadorFavServer: jogadorFavVar
+            })
+        }).then(function (resposta) {
+
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+                window.alert("Cadastro realizado com sucesso!");
+                window.location = "login.html";
+                limparFormulario();
+                finalizarAguardar();
+            } else {
+                throw ("Houve um erro ao tentar realizar o cadastro!");
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+            finalizarAguardar();
+        });
+
+        return false;
+    }
+</script>

@@ -62,12 +62,17 @@ function entrar(req, res) {
 
 function cadastrar(req, res) {
     var email = req.body.emailServer;
+    var senha = req.body.senhaServer;
+    var nome = req.body.nomeServer;
+    var data = req.body.dataNascimentoServer;
+    var organizada = req.body.organizadaServer;
+    var jogadorFav = req.body.jogadorFavServer;
 
     if (email == undefined) {
         res.status(400).send("Seu email está undefined!");
     } else {
         
-        usuarioModel.cadastrar(email)
+        usuarioModel.cadastrar(email, senha, nome, data, organizada, jogadorFav)
             .then(
                 function (resultado) {
                     res.json(resultado);

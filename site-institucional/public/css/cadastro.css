@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+*{
+    font-family: 'Open Sans', sans-serif;
+    user-select: none;
+}
+body{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+a{
+    text-decoration: none;
+}
+p{
+    padding: 0;
+    margin: 0;
+}
+#container-page{
+    display: flex;
+    flex-direction: row;
+}
+#container-image{
+    background-color: tomato;
+    width: 45%;
+    height: 100vh;
+}
+#container-image img{
+    height: 100%;
+}
+#container-login{
+    background-image: linear-gradient(to bottom, rgb(39, 36, 36), rgb(140, 19, 19));
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#container-login p{
+    color: white;
+    padding-top: 10px;
+}
+#form{
+    width: fit-content;
+    background-color: #fff;
+    padding: 50px;
+    border-radius: 20px;
+    text-align: center;
+}
+#form h1{
+    text-align: center;
+}
+#form img{
+    width: 100px;
+}
+#form input{
+    display: block;
+    margin: 5px;
+    font-size: 15px;
+    border-radius: 20px;
+    border: 1px solid;
+    padding: 10px;
+}
+#form input[type="email"],[type="password"], [type="date"], [type="text"]{
+    width: 200px;
+}
+#form select{
+    display: block;
+    margin: 5px;
+    font-size: 15px;
+    border-radius: 20px;
+    border: 1px solid;
+    padding: 10px;
+}
+#left-div, #right-div{
+    text-align: center;
+}
+#form input[type="button"]{
+    cursor: pointer;
+    border: none;
+    padding: 10px 20px;
+    background-color: rgb(192, 189, 189);
+}
+#form input[type="button"]:hover{
+    background-color: #222;
+    color: white;
+    /* transição com css */
+}
+.div-organization{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 20px;
+}
+#bottom-form{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+.select-box{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
