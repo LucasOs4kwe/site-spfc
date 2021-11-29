@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 *{
     font-family: 'Open Sans', sans-serif;
+    user-select: none;
 }
 body{
     margin: 0;
@@ -49,7 +50,6 @@ p{
 }
 #form img{
     width: 100px;
-    
 }
 #form input{
     display: block;
@@ -67,11 +67,11 @@ p{
     border: none;
     padding: 10px 20px;
     background-color: rgb(192, 189, 189);
-    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 #form input[type="button"]:hover{
     background-color: #222;
     color: white;
+    /* transição com css */
 }
 #bottom-form{
     display: flex;
