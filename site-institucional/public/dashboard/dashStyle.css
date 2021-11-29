@@ -243,3 +243,14 @@ li.dropdown{
     background-color: white;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
+
+
+@media (max-width: 1400px){
+    #conteudo{
+        position: absolute;
+        left: 23vw;
+        height: 65vh;
+        width: 55vw;
+    }
+    /* A barra lateral ainda precisa de revisão */
+}

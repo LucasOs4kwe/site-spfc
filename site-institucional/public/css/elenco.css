@@ -215,8 +215,6 @@ footer .links{
 }
 
 
-
-
 /* SCROLL BAR */
 body::-webkit-scrollbar{
     width: 8px;
@@ -227,4 +225,12 @@ body::-webkit-scrollbar-thumb{
 }
 body::-webkit-scrollbar-thumb:hover{
     background-color: rgb(235, 42, 42);
+}
+
+@media (max-width: 1400px){
+    footer .social-box .navlist-footer li a i {
+        margin-left: 25px;
+        font-size: 45px;
+        color: rgb(255, 255, 255);
+    }   
 }
