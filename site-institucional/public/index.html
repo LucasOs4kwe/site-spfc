@@ -58,9 +58,9 @@
                         <div class="newsletter-box">
                             <p>Newsletter</p>
                             <p>Digite seu email para receber novidades do tricolor!</p>
-                            <form id="newsletter" method="post">
-                                <label for=""><input name="email" type="email" required placeholder="Email" id="input_email"></label>
-                                <button type="submit" onclick="cadastrar();">Ok</button>
+                            <form id="newsletter">
+                                <label for=""><input name="email" type="email" placeholder="Email" id="input_email"></label>
+                                <button type="button" onclick="cadastrar();">Ok</button>
                             </form>
                         </div>
                         <footer>
@@ -93,17 +93,19 @@
 </html>
 <script>
     function cadastrar() {
+        // aguardar();
 
         var emailVar = input_email.value;
 
         if (emailVar == "") {
-            // window.alert("Preencha todos os campos para prosseguir!");
+            window.alert("Campo email vazio!");
+            // finalizarAguardar();
             return false;
         }
 
         if (emailVar.indexOf("@") == -1 || emailVar.indexOf(".com") == -1) {
             window.alert("Ops, e-mail inválido! Verifique e tente novamente.");
-            finalizarAguardar();
+            // finalizarAguardar();
             return false;
         }
 
@@ -121,14 +123,15 @@
 
             if (resposta.ok) {
                 window.alert("Cadastro realizado com sucesso!");
-                limparFormulario();
-                finalizarAguardar();
+                // window.location = "login.html";
+                input_email.value = '';
+                // finalizarAguardar();
             } else {
                 throw ("Houve um erro ao tentar realizar o cadastro!");
             }
         }).catch(function (resposta) {
             console.log(`#ERRO: ${resposta}`);
-            finalizarAguardar();
+            // finalizarAguardar();
         });
 
         return false;
