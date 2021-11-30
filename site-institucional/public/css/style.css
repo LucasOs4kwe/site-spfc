@@ -52,7 +52,7 @@ ul{
     color: rgb(255, 255, 255);
 }
 .active{
-    border-bottom: 3px solid rgb(237, 58, 58);
+    border-bottom: 5px solid rgb(237, 58, 58);
 }
 
 /* DROPDOWN */

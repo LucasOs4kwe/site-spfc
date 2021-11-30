@@ -5,6 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/institucional.css">
+        <script src="https://kit.fontawesome.com/1dbb06025a.js" crossorigin="anonymous"></script>
         <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
         <title>SPFCStats • Notícias</title>
     </head>
@@ -22,11 +23,15 @@
                     <li class="navitem"><a href="sobre.html">Sobre</a></li>
                 </ul>
             </nav>
+            <div class="profile-login">
+                <a href="login.html"><i class="fas fa-user-circle"></i></a>
+            </div>
         </header>
 
         <main class="content">
             <section class="titles">
                 <div class="troph-container">
+                    <h1>Clube da fé</h1>
                     <div class="trofeus">
                         <div class="title"><img src="assets/img/troféus/mundial-fifa.png" alt="" title="Mundial de clubes da FIFA"><p>1x</p></div>
                         <div class="title"><img src="assets/img/troféus/copa_intercontinental.png" alt="" title="Copa Intercontinental"><p>3x</p></div>
@@ -43,12 +48,47 @@
                     </div>
                 </div>
             </section>
-            <section class="news">
-                <iframe src="https://feed.mikle.com/widget/v2/151381/?preloader-text=Loading" height="511px" width="100%" class="fw-iframe" scrolling="no" frameborder="0"></iframe>
-            </section>
-            <section class="yt">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/xT6meappih0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </section>
+            <div class="informativo">
+                <section class="news">
+                    <!-- start feedwind code --> <script type="text/javascript" src="https://feed.mikle.com/js/fw-loader.js" preloader-text="Loading" data-fw-param="151381/"></script> <!-- end feedwind code -->
+                </section>
+                <section class="yt">
+                    <h1>Último SPtv</h1>
+                    <iframe width="350px" height="350px" src="https://www.youtube.com/embed/xT6meappih0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </section>
+            </div>
         </main>
+        <section class="section-three">
+            <div class="newsletter-box">
+                <h1>Newsletter</h1>
+                <p>Digite seu email para receber novidades do tricolor!</p>
+                <form id="newsletter">
+                    <label for=""><input name="email" type="email" placeholder="Email" id="input_email"></label>
+                    <button type="button" onclick="cadastrar();">Ok</button>
+                </form>
+            </div>
+            <footer>
+                <div class="social-box">
+                    <ul class="navlist-footer">
+                        <li><a href="https://www.facebook.com/saopaulofc/" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                        <li><a href="https://www.instagram.com/saopaulofc/?hl=pt-br" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="https://twitter.com/SaoPauloFC" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="https://www.tiktok.com/@saopaulofc?" target="_blank"><i class="fab fa-tiktok"></i></a></li>
+                        <li><a href="https://www.youtube.com/user/saopaulofctv" target="_blank"><i class="fab fa-youtube"></i></a></li>
+                    </ul>
+                </div>
+                <div class="links">
+                    <ul class="navlist-footer">
+                        <li><a href="#">Sócio torcedor</a></li>
+                        <li><a href="#">Ingressos online</a></li>
+                        <li><a href="#">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="img-footer"><img src="assets/img/spfc-simbolo.png" alt=""></div>
+            </footer>
+        </section>
+        <div class="copyright">
+            <p>&copy; SPFCStats 2021</p>
+        </div>
     </body>
 </html>
