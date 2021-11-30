@@ -6,7 +6,7 @@
     font-family: 'Open Sans', sans-serif;
 }
 body{
-    background-color: rgb(38, 38, 38);
+    background-image: linear-gradient(to bottom, rgb(20, 20, 20), rgb(58, 57, 57),rgb(20, 20, 20));
 }
 a{
     text-decoration: none;
@@ -57,7 +57,6 @@ ul{
 
 /* ELENCO */
 .main-content{
-    outline: 1px solid #fff;
     margin: 10px;
 }
 .players{
@@ -66,7 +65,6 @@ ul{
     align-items: center;
     flex-direction: column;
     margin: 20px;
-    outline: 1px solid #fff;
     min-height: 50vh;
     padding: 10px;
 }
@@ -120,13 +118,11 @@ ul{
 
 /* SECTION THREE */
 .section-three{
-    background-color: rgb(38, 38, 38);
     padding: 80px;
     height: 20vh;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    border-top: 1px solid #000;
 }
 .section-three footer{
     display: flex;
@@ -203,7 +199,6 @@ footer .links{
 }
 .copyright{
     text-align: center;
-    background-color: rgb(38, 38, 38);
     padding: 20px;
 }
 .copyright p{
@@ -227,10 +222,20 @@ body::-webkit-scrollbar-thumb:hover{
     background-color: rgb(235, 42, 42);
 }
 
+/* RESPONSIVIDADE */
 @media (max-width: 1400px){
     footer .social-box .navlist-footer li a i {
         margin-left: 25px;
         font-size: 45px;
         color: rgb(255, 255, 255);
+    }
+    .section-one .section-image2 img{
+        width: 450px;
     }   
+    .section-one .confront-box{
+        padding: 30px;
+    }
+    .img-footer img{
+        width: 200px;
+    }
 }
