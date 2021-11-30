@@ -1,12 +1,96 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    dsadasd
-</body>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/index2.css">
+        <link rel="shortcut icon" href="../assets/img/favicon.ico" type="image/x-icon">
+        <script src="https://kit.fontawesome.com/1dbb06025a.js" crossorigin="anonymous"></script>
+        <title>SPFCStats • Início</title>
+    </head>
+    <body>
+        <div class="page-container">
+                <header class="header">
+                    <div id="img-header">
+                        <img src="../assets/img/spfc-simbolo.png" alt="">
+                    </div>
+                    <nav class="navbar">
+                        <ul class="nav-list" id="nav-list">
+                            <li class="navitem active"><a href="#">Início</a></li>
+                            <li class="navitem"><a href="institucional.html">Notícias</a></li>
+                            <li class="navitem"><a href="elenco.html">Elenco</a></li>
+                            <li class="navitem"><a href="dashboard/dash.html">Análises</a></li>
+                            <li class="navitem"><a href="sobre.html">Sobre</a></li>
+                        </ul>
+                    </nav>
+                    <div class="profile-login">
+                        <a href="login.html"><i class="fas fa-user-circle dropbtn"></i></a>
+                        <div class="dropdown-content">
+                            <a href="#">Flappy Tricolor</a>
+                            <a href="#">Sair</a>
+                        </div>
+                    </div>
+                </header>
+                <div class="content">
+                    <section class="section-one">
+                        <div class="next-game">
+                            <p>Próximo jogo</p>
+                            <div class="confront-box">
+                                <img src="../assets/img/RedBullBragantino.png" alt="">
+                                <p>X</p>
+                                <img src="../assets/img/spfc-simbolo.png" alt="">
+                                <div class="stats">
+                                    <p>Campeonato Brasileiro Série A</p>
+                                    <p>Estádio Nabi Abi Chedid<br> 24/10 - 18p5</p>
+                                    <div class="buy-button">
+                                        <button class="btn"><a href="#">Comprar ingresso</a><i class="fas fa-arrow-right"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section-image2">
+                            <img src="../assets/img/emiliano-rigoni.png" alt="">
+                        </div>
+                    </section>
+                    <section class="section-two">
+                        
+                        <div class="patrocinadores"><img src="../assets/img/sportsbet.io.png" alt=""></div>
+                    </section>
+                    <section class="section-three">
+                        <div class="newsletter-box">
+                            <h1>Newsletter</h1>
+                            <p>Digite seu email para receber novidades do tricolor!</p>
+                            <form id="newsletter">
+                                <label for=""><input name="email" type="email" placeholder="Email" id="input_email"></label>
+                                <button type="button" onclick="cadastrar();">Ok</button>
+                            </form>
+                        </div>
+                        <footer>
+                            <div class="social-box">
+                                <ul class="navlist-footer">
+                                    <li><a href="https://www.facebook.com/saopaulofc/" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                                    <li><a href="https://www.instagram.com/saopaulofc/?hl=pt-br" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                                    <li><a href="https://twitter.com/SaoPauloFC" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                                    <li><a href="https://www.tiktok.com/@saopaulofc?" target="_blank"><i class="fab fa-tiktok"></i></a></li>
+                                    <li><a href="https://www.youtube.com/user/saopaulofctv" target="_blank"><i class="fab fa-youtube"></i></a></li>
+                                </ul>
+                            </div>
+                            <div class="links">
+                                <ul class="navlist-footer">
+                                    <li><a href="#">Sócio torcedor</a></li>
+                                    <li><a href="#">Ingressos online</a></li>
+                                    <li><a href="#">Contato</a></li>
+                                </ul>
+                            </div>
+                            <div class="img-footer"><img src="../assets/img/spfc-simbolo.png" alt=""></div>
+                        </footer>
+                    </section>
+                    <div class="copyright">
+                        <p>&copy; SPFCStats 2021</p>
+                    </div>
+                </div>
+        </div>
+    </body>
+    <script src="js/app.js"></script>
 </html>
