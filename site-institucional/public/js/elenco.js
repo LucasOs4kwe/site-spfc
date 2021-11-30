@@ -11,7 +11,6 @@ select.addEventListener('change', function(){
             meio[i].style.display = 'none';
             defesa[i].style.display = 'none';
         }
-        
     }
 });
 
