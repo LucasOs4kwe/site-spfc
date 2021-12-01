@@ -86,8 +86,8 @@
                         </div>
                     </div>
                 </div>
-                <a href="login.html"><p>Já tem conta? Faça login!</p></a>
-                <a href="index.html"><p>Início</p></a>
+                <a href="login.html" id="sign_in"><p>Já tem conta? Faça login!</p></a>
+                <a href="index.html" id="home_link2"><p>Início</p></a>
             </div>
             <div id="container-image">
                 <img src="assets/img/morumbi-inside.jpg" alt="">
@@ -106,7 +106,7 @@
         var organizadaVar = organizada_slct.value;
         var confirmacaoSenhaVar = confirmacao_senha_input.value;
 
-        if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "" || dataNascimentoVar == "") {
+        if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "" || dataNascimentoVar == "" || dataNascimentoVar == "" || jogadorFavVar == "") {
 
             window.alert("Preencha todos os campos para prosseguir!");
             if (nomeVar == "") {

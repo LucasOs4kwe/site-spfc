@@ -100,3 +100,8 @@ p{
     display: flex;
     flex-direction: column;
 }
+#sign_in:hover,
+#home_link2:hover{
+    text-decoration: underline;
+    color: white;
+}
