@@ -1,4 +1,4 @@
-var database = require('site-institucional/src/database/config.js');
+var database = require('site-noticias/src/database/config.js');
 
 function dados_Torganizada(id_organizada){
     instrucaoSql = `select count(fk_jogador) as Jogador from usuario inner join 
