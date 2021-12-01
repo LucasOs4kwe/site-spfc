@@ -5,6 +5,7 @@
     padding: 0;
     margin: 0;
     font-family: 'Open Sans', sans-serif;
+    user-select: none;
 }
 body{
     background-image: linear-gradient(to bottom, rgb(20, 20, 20), rgb(58, 57, 57));

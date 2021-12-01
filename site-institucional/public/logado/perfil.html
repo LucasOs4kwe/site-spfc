@@ -22,7 +22,7 @@
                 <aside class="aside-content">
                     <h1 id="usuario"></h1>
                     <a href="index2.html">Inicio</a>
-                    <a href="#">Sair</a>
+                    <a href="../index.html" id="sair_a" >Sair</a>
                 </aside>
                 <div class="dados-perfil">
                     <div class="data-box">
@@ -35,4 +35,10 @@
 </html>
 <script>
     usuario.innerHTML = `Bem vindo(a), ${sessionStorage.NOME_USUARIO}`;
+
+    const sair = document.getElementById('sair_a');
+    sair.addEventListener('click', function(){
+        sessionStorage.clear();
+    })
+    
 </script>
