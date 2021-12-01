@@ -14,3 +14,4 @@ for(var i = 0; i < list.length; i++) {
     this.className += " active"; 
     });
 }
+
