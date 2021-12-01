@@ -17,19 +17,18 @@
                     </div>
                     <nav class="navbar">
                         <ul class="nav-list" id="nav-list">
-                            <li class="navitem active"><a href="#">Início</a></li>
-                            <li class="navitem"><a href="noticias.html">Notícias</a></li>
-                            <li class="navitem"><a href="elenco.html">Elenco</a></li>
-                            <li class="navitem"><a href="dashboard/dash.html">Análises</a></li>
+                            <li class="navitem active"><a href="index2.html">Início</a></li>
+                            <li class="navitem"><a href="noticias2.html">Notícias</a></li>
+                            <li class="navitem"><a href="elenco2.html">Elenco</a></li>
                             <li class="navitem"><a href="sobre.html">Sobre</a></li>
                         </ul>
                     </nav>
                     <div class="profile-login">
-                        <a href="login.html"><i class="fas fa-user-circle dropbtn"></i></a>
+                        <a><i class="fas fa-user-circle dropbtn"></i></a>
                         <div class="dropdown-content">
                             <a href="perfil.html">Meu perfil</a>
-                            <a href="../flappy/flappy.html">Flappy Tricolor</a>
-                            <a href="#">Sair</a>
+                            <a href="../dashboard/dash.html">Dashboard</a>
+                            <a href="../index.html" id="logout">Sair</a>
                         </div>
                     </div>
                 </header>
@@ -38,15 +37,15 @@
                         <div class="next-game">
                             <p>Próximo jogo</p>
                             <div class="confront-box">
-                                <img src="../assets/img/RedBullBragantino.png" alt="">
+                                <img src="../assets/img/Gremio-Logo.png" alt="">
                                 <p>X</p>
                                 <img src="../assets/img/spfc-simbolo.png" alt="">
                                 <div class="stats">
                                     <p>Campeonato Brasileiro Série A</p>
-                                    <p>Estádio Nabi Abi Chedid<br> 24/10 - 18p5</p>
-                                    <div class="buy-button">
+                                    <p>Arena do Grêmio<br> 02/12 - 20:00</p>
+                                    <!-- <div class="buy-button">
                                         <button class="btn"><a href="#">Comprar ingresso</a><i class="fas fa-arrow-right"></i></button>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </div>
@@ -95,3 +94,9 @@
     </body>
     <script src="js/app.js"></script>
 </html>
+<script>
+    const sair = document.getElementById('logout');
+    sair.addEventListener('click', function(){
+        sessionStorage.clear();
+    })
+</script>
