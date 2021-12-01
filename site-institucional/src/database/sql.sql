@@ -1,56 +1,80 @@
--- Arquivo de apoio, caso você queira criar tabelas como as aqui criadas para a API funcionar.
--- Você precisa executar os comandos no banco de dados para criar as tabelas,
--- ter este arquivo aqui não significa que a tabela em seu BD estará como abaixo!
+create database spfc;
+use spfc;
 
-/* para sql server - remoto - produção */
-
-CREATE TABLE usuario (
-	id INT PRIMARY KEY IDENTITY(1,1),
-	nome VARCHAR(50),
-	email VARCHAR(50),
-	senha VARCHAR(50),
+-- TABELA USUÁRIO
+create table usuario(
+id_usuario INT AUTO_INCREMENT,
+nome_usuario VARCHAR(50), 
+email_usuario VARCHAR(60),
+senha_usuario VARCHAR(25),
+dataNascimento_usuario DATE,
+fk_jogadorFav INT,
+fk_torcidaOrg INT,
+PRIMARY KEY (id_usuario),
+FOREIGN KEY (fk_jogadorFav) REFERENCES jogador(id_jogadorFav),
+FOREIGN KEY (fk_torcidaOrg) REFERENCES torcida_organizada(id_torcidaOrg)
 );
 
-CREATE TABLE aviso (
-	id INT PRIMARY KEY IDENTITY(1,1),
-	titulo VARCHAR(100),
-    descricao VARCHAR(150),
-	fk_usuario INT FOREIGN KEY REFERENCES usuario(id)
-); 
-
-CREATE TABLE medida (
-	id INT PRIMARY KEY IDENTITY(1,1),
-	temperatura DECIMAL,
-	umidade DECIMAL,
-	momento DATETIME,
-	fk_aquario INT
+-- TABELA JOGADOR
+create table jogador(
+id_jogadorFav INT AUTO_INCREMENT,
+nome_jogador VARCHAR(50),
+posicao_jogador VARCHAR(50),
+PRIMARY KEY (id_jogadorFav)
 );
 
-
-/* para workbench - local - desenvolvimento */
-CREATE DATABASE acquatec;
-
-USE acquatec;
-
-CREATE TABLE usuario (
-	id INT PRIMARY KEY AUTO_INCREMENT,
-	nome VARCHAR(50),
-	email VARCHAR(50),
-	senha VARCHAR(50)
+-- TABELA T. ORGANIZADA
+create table torcida_organizada(
+id_torcidaOrg INT AUTO_INCREMENT,
+nome_torcida VARCHAR(50),
+PRIMARY KEY (id_torcidaOrg)
 );
 
-CREATE TABLE aviso (
-	id INT PRIMARY KEY AUTO_INCREMENT,
-	titulo VARCHAR(100),
-    descricao VARCHAR(150),
-	fk_usuario INT,
-	FOREIGN KEY (fk_usuario) REFERENCES usuario(id)
-); 
+select * from usuario;
+select * from jogador;
+select * from torcida_organizada;
 
-CREATE TABLE medida (
-	id INT PRIMARY KEY AUTO_INCREMENT,
-	temperatura DECIMAL,
-	umidade DECIMAL,
-	momento DATETIME,
-	fk_aquario INT
-);
+-- INSERTS 
+-- JOGADORES 
+insert into jogador (nome_jogador, posicao_jogador) values 
+("Luciano", "Atacante"),
+("Jonathan Calleri", "Atacante"),
+("Éder", "Atacante"),
+("Pablo", "Atacante"),
+("Galeano", "Atacante"),
+("Emiliano Rigoni", "Atacante"),
+("Martín Benítez", "Meia Atacante"),
+("Igor Gomes", "Meia Atacante"),
+("Luan", "Volante"),
+("Gabriel Sara", "Meia Atacante"),
+("Gabriel Neves", "Volante"),
+("Liziero", "Volante"),
+("Rodrigo Nestor", "Volante"),
+("Vitor Bueno", "Meia Atacante"),
+("Shaylon", "Meia Atacante"),
+("Talles Costa", "Volante"),
+("Wellington", "Lateral Esquerdo"),
+("William", "Volante"),
+("Miranda", "Zagueiro"),
+("Robert Arboleda", "Zagueiro"),
+("Reinaldo", "Lateral Esquerdo"),
+("Luis Orejuela", "Lateral Direito"),
+("Bruno Alves", "Zagueiro"),
+("Diego Costa", "Zagueiro"),
+("Igor Vinícius", "Lateral Direito"),
+("Léo", "Lateral Esquerdo"),
+("Walce", "Zagueiro"),
+("Rodrigo Freitas", "Zagueiro"),
+("Tiago Volpi", "Goleiro"),
+("Lucas Perri", "Goleiro"),
+("Thiago Couto", "Goleiro");
+
+-- TORCIDA ORGANIZADA
+insert into torcida_organizada (nome_torcida) values
+("Torcida Independente"),
+("Dragões da Real"),
+("Falange Tricolor"),
+("Comando Metal Tricolor"),
+("Pantera Tricolor"),
+("Caveira Tricolor"),
+("Coração Tricolor");
