@@ -32,7 +32,7 @@
                                 <div class="select-box">
                                     Jogador favorito
                                     <select name="" id="jogadorFav_slct">
-                                        <option value="null" selected>Nenhum</option>
+                                        <option value="" selected disabled></option>
                                         <option value="1">Luciano</option>
                                         <option value="2">Jonathan Calleri</option>
                                         <option value="3">Éder</option>
@@ -71,7 +71,7 @@
                         <div class="select-box">
                             Torcida organizada favorita
                             <select name="" id="organizada_slct">
-                                <option value="null" selected>Nenhuma</option>
+                                <option value="" selected disabled></option>
                                 <option value="1">Torcida Independente</option>
                                 <option value="2">Dragões da Real</option>
                                 <option value="3">Falange Tricolor</option>
@@ -132,7 +132,6 @@
             finalizarAguardar();
             return false;
         }
-
         if (senhaVar != confirmacaoSenhaVar) {
             window.alert("As senhas inseridas devem ser iguais para prosseguir!");
             finalizarAguardar();
