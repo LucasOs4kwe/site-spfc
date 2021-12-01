@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="../assets/img/favicon.ico" type="image/x-icon">
         <link rel="stylesheet" href="dashStyle.css">
+        <script type="text/javascript" src="https://www.chartjs.org/dist/2.8.0/Chart.min.js"></script>
         <title>SPFCStats • Análises</title>
     </head>
     <body>
@@ -69,7 +70,9 @@
         </div>
         <div id="conteudo">
             <div id="graph-content">
-                
+                <div class="graph">
+                    <canvas id="canvas_grafico"></canvas>
+                </div>
             </div>
         </div>
         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
@@ -83,28 +86,7 @@
     <script src="app.js"></script>
     <script src="../homepage/js/app.js"></script>
 </html>
-
 <script>
-    function obterDadosGrafico(organizada) {
-        if (proximaAtualizacao != undefined) {
-            clearTimeout(proximaAtualizacao);
-        }
-
-        fetch(`/medidas/ultimas/${organizada}`, { cache: 'no-store' }).then(function (response) {
-            if (response.ok) {
-                response.json().then(function (resposta) {
-                    console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
-                    resposta.reverse();
-
-                    plotarGrafico(resposta, idAquario);
-                });
-            } else {
-                console.error('Nenhum dado encontrado ou erro na API');
-            }
-        })
-            .catch(function (error) {
-                console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
-            });
-
-    }
+    // window.onload = obterDadosGrafico(1);
+    
 </script>

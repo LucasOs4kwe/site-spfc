@@ -20,6 +20,7 @@
             </header>
             <div id="profile-content">
                 <aside class="aside-content">
+                    <h1 id="usuario"></h1>
                     <a href="index2.html">Inicio</a>
                     <a href="#">Sair</a>
                 </aside>
@@ -32,3 +33,6 @@
         </div>
     </body>
 </html>
+<script>
+    usuario.innerHTML = `Bem vindo(a), ${sessionStorage.NOME_USUARIO}`;
+</script>
