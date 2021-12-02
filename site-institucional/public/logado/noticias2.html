@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/noticias2.css">
+        <script src="https://kit.fontawesome.com/1dbb06025a.js" crossorigin="anonymous"></script>
+        <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+        <title>SPFCStats • Notícias</title>
+    </head>
+    <body>
+        <header class="header">
+            <div id="img-header">
+                <img src="../assets/img/spfc-simbolo.png" alt="">
+            </div>
+            <nav class="navbar">
+                <ul class="nav-list" id="nav-list">
+                    <li class="navitem"><a href="index2.html">Início</a></li>
+                    <li class="navitem active"><a href="noticias2.html">Notícias</a></li>
+                    <li class="navitem"><a href="elenco2.html">Elenco</a></li>
+                    <!-- <li class="navitem"><a href="sobre.html">Sobre</a></li> -->
+                </ul>
+            </nav>
+            <div class="profile-login">
+                <a><i class="fas fa-user-circle dropbtn"></i></a>
+                <div class="dropdown-content">
+                    <a href="perfil.html">Meu perfil</a>
+                    <a href="../dashboard/posicoes.html">Dashboard</a>
+                    <a href="../index.html" id="logout">Sair</a>
+                </div>
+            </div>
+        </header>
+
+        <main class="content">
+            <section class="titles">
+                <div class="troph-container">
+                    <h1>Clube da fé</h1>
+                    <div class="trofeus">
+                        <div class="title"><img src="../assets/img/troféus/mundial-fifa.png" alt="" title="Mundial de clubes da FIFA"><p>1x</p></div>
+                        <div class="title"><img src="../assets/img/troféus/copa_intercontinental.png" alt="" title="Copa Intercontinental"><p>2x</p></div>
+                        <div class="title"><img src="../assets/img/troféus/libertadores.png" alt="" title="Copa Libertadores"><p>3x</p></div>
+                        <div class="title"><img src="../assets/img/troféus/sul-americana.png" alt="" title="Copa Sul-Americana"><p>1x</p></div>
+                        <div class="title"><img src="../assets/img/troféus/recopa sul-americana.png" alt="" title="Recopa Sul-Americana"><p>2x</p></div>
+                        <div class="title"><img src="../assets/img/troféus/supercopa-sulamericana.png" alt="" title="Supercopa Sul-Americana"><p>1x</p></div>
+                        <div class="title"><img src="../assets/img/troféus/copa-conmebol.png" alt="" title="Copa Conmebol"><p>1x</p></div>
+                        <div class="title"><img src="../assets/img/troféus/copa master da conmebol.png" alt="" title="Copa Master Conmebol"><p>1x</p></div>
+                        <div class="title"><img src="../assets/img/troféus/campeonato-br.png" alt="" title="Campeonato Brasileiro"><p>6x</p></div>
+                        <div class="title"><img src="../assets/img/troféus/rio-sp.png" alt="" title="Torneiro Rio-SP"><p>12x</p></div>
+                        <div class="title"><img src="../assets/img/troféus/campeonato-paulista.png" alt="" title="Campeonato Paulista"><p>22x</p></div>
+                        <div class="title"><img src="../assets/img/troféus/supercampeonato-paulista.png" alt="" title="Super Campeonato Paulista"><p>1x</p></div>
+                    </div>
+                </div>
+            </section>
+            <div class="informativo">
+                <section class="news">
+                    <!-- start feedwind code --> <script type="text/javascript" src="https://feed.mikle.com/js/fw-loader.js" preloader-text="Loading" data-fw-param="151381/"></script> <!-- end feedwind code -->
+                </section>
+                <section class="yt">
+                    <h1>Último SPTV</h1>
+                    <iframe width="500px" height="350px" src="https://www.youtube.com/embed/xT6meappih0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </section>
+            </div>
+        </main>
+        <section class="section-three">
+            <div class="newsletter-box">
+                <h1>Newsletter</h1>
+                <p>Digite seu email para receber novidades do tricolor!</p>
+                <form id="newsletter">
+                    <label for=""><input name="email" type="email" placeholder="Email" id="input_email"></label>
+                    <button type="button" onclick="cadastrar();">Ok</button>
+                </form>
+            </div>
+            <footer>
+                <div class="social-box">
+                    <ul class="navlist-footer">
+                        <li><a href="https://www.facebook.com/saopaulofc/" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                        <li><a href="https://www.instagram.com/saopaulofc/?hl=pt-br" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="https://twitter.com/SaoPauloFC" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="https://www.tiktok.com/@saopaulofc?" target="_blank"><i class="fab fa-tiktok"></i></a></li>
+                        <li><a href="https://www.youtube.com/user/saopaulofctv" target="_blank"><i class="fab fa-youtube"></i></a></li>
+                    </ul>
+                </div>
+                <div class="links">
+                    <ul class="navlist-footer">
+                        <li><a href="#">Sócio torcedor</a></li>
+                        <li><a href="#">Ingressos online</a></li>
+                        <li><a href="#">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="img-footer"><img src="../assets/img/spfc-simbolo.png" alt=""></div>
+            </footer>
+        </section>
+        <div class="copyright">
+            <p>&copy; SPFCStats 2021</p>
+        </div>
+    </body>
+</html>
