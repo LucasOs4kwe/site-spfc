@@ -10,7 +10,7 @@
         <script type="text/javascript" src="https://www.chartjs.org/dist/2.8.0/Chart.min.js"></script>
         <title>SPFCStats • Análises</title>
     </head>
-    <body onload="t_independente();">
+    <body onload="listar();">
         <header class="header">
             <div class="img-header">
                 <img src="../assets/img/spfc-simbolo.png" alt="">
@@ -18,7 +18,7 @@
         </header>
         <div class="navigation">
             <ul>
-                <li class="list active">
+                <li class="list">
                     <b></b>
                     <b></b>
                     <a href="dash.html">
@@ -42,7 +42,7 @@
                         <span class="title">Gráfico posições</span>
                     </a>
                 </li>
-                <li class="list">
+                <li class="list active">
                     <b></b>
                     <b></b>
                     <a href="usuario.html">
@@ -80,16 +80,17 @@
 </html>
 <script>
 
-    function t_independente() {
-            fetch("/dados/t_independente").then(function (resposta) {
-                console.log("ESTOU NO THEN DO independente()!")
+    function listar() {
+            fetch("/usuarios/listar").then(function (resposta) {
+                console.log("ESTOU NO THEN DO listar()!")
                 if (resposta.ok) {
                     resposta.json().then(function (resposta) {
                         console.log("Dados recebidos do usuario: ", JSON.stringify(resposta));
 
-                        fk_organizada = resposta[resposta.indexOf(':') + 1]//não sei pq mas isso funciona
-                        console.log(id_usuario.usuario);
-                        sessionStorage.FK_ORGANIZADA = id_usuario.usuario;
+                        ectomorfo = resposta[resposta.indexOf(':') + 1]//não sei pq mas isso funciona
+                        console.log(id_usuario.nmr_usuarios);
+                        sessionStorage.ID_USUARIO = id_usuario.nmr_usuarios;
+
                     });
                 } else {
                     console.log("Dados recebidos: ", JSON.stringify(resposta));
@@ -100,21 +101,56 @@
             return false;
         }
 
+        var ctxBar = document.getElementById("chartBar").getContext("2d");
+        var rotulosBar = ['Usuários'];
+        var dataBar = [Number(sessionStorage.ID_USUARIO)];
+        var configBar = {
+        type: 'bar',
+        data: {
+            labels: rotulosBar, // referenciando a variável de rótulos (labels) para o gráfico de barras
+            datasets: [
+                {
+                    label: 'Quantidade de Biotipo',
+                    data: dataBar, // referenciando a variável de dados para o gráfico de barras
+                    backgroundColor: [
+                        '#e7e41b',
+                        '#696969',
+                        '#1b1818',
+
+                    ],
+                    borderColor: [
+                        '#FFF',
+                        '#FFF',
+                        '#FFF',
+                    ],
+                    borderWidth: 1
+                }
+            ]
+        },
+        options: {
+            // por padrão, vem como 'true', e faz com que o gráfico se 'mantenha com o mesmo aspecto de proporção', não ficando responsivo
+            maintainAspectRatio: false,
+            scales: {
+                y: {
+                    beginAtZero: true,
+                }
+            }
+        }
+    }
+    var ax_chartBar = new Chart(ctxBar, configBar); // criando o gráfico, chamando o new Chart da biblioteca, passando o contexto e as configurações
+
+
+
+
         const ctx = document.getElementById('myChart').getContext('2d');
         const myChart = new Chart(ctx, {
             type: 'bar',
             data: {
-                labels: ['Torcida Independente', 'Dragões da Real', 'Falange Tricolor', 'Comando Metal Tricolor', 'Pantera Tricolor', 'Caveira Tricolor', 'Coração Tricolor'],
+                labels: ['Usuários'],
                 datasets: [{
-                    label: 'Seguidores da organizada',
-                    data: [Number(sessionStorage.FK_ORGANIZADA)],
+                    label: 'Número de usuários cadastros no site',
+                    data: [Number(sessionStorage.ID_USUARIO)],
                     backgroundColor: [
-                        'rgba(255, 99, 132, 0.2)',
-                        'rgba(255, 99, 132, 0.2)',
-                        'rgba(255, 99, 132, 0.2)',
-                        'rgba(255, 99, 132, 0.2)',
-                        'rgba(255, 99, 132, 0.2)',
-                        'rgba(255, 99, 132, 0.2)',
                         'rgba(255, 99, 132, 0.2)'
                     ],
                     borderColor: [

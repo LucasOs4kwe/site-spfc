@@ -1,13 +1,8 @@
 var dadosModel = require("../models/dadosModel");
 
 
-function testar(req, res) {
-  console.log("ENTRAMOS NO avisoController");
-  res.send("ENTRAMOS NO AVISO CONTROLLER");
-}
-
-function dados_organizada(req, res){
-  dadosModel.dados_organizada().then(function (resultado) {
+function t_independente(req, res){
+  dadosModel.t_independente().then(function (resultado) {
     if(resultado.lenght > 0){
       res.status(200).json(resultado);
     }else{
@@ -43,6 +38,6 @@ function listar_user(req, res){
 }
 
 module.exports = {
-  dados_organizada,
+  t_independente,
   listar_user
 }

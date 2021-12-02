@@ -7,12 +7,11 @@
         <link rel="stylesheet" href="./css/perfil.css">
         <title>Meu perfil</title>
     </head>
-    <body>
+    <body onload="t_independente();">
         <div id="container-page">
             <header class="header">
                 <div id="header-textcontent">
                     <h1>Meu perfil</h1>
-                    <p>Confira e mantenha os dados atualizados</p>
                 </div>
                 <div id="header-img">
                     <img src="../assets/img/spfc-simbolo.png" alt="">
@@ -26,7 +25,10 @@
                 </aside>
                 <div class="dados-perfil">
                     <div class="data-box">
-                        
+                        <h1 id="Email"></h1>
+                        <h1 id="DataNasci"></h1>
+                        <h1 id="Torcida"></h1>
+                        <h1 id="Jogador"></h1>
                     </div>
                 </div>
             </div>
@@ -35,10 +37,33 @@
 </html>
 <script>
     usuario.innerHTML = `Bem vindo(a), ${sessionStorage.NOME_USUARIO}`;
+    Email.innerHTML = `Email: ${sessionStorage.EMAIL_USUARIO}`;
+    DataNasci.innerHTML = `Data de nascimento: ${sessionStorage.DATA_NASCIMENTO}`;
+    Jogador.innerHTML = `Jogador favorito: ${sessionStorage.FK_JOGADOR}`;
 
     const sair = document.getElementById('sair_a');
     sair.addEventListener('click', function(){
         sessionStorage.clear();
     })
+    function t_independente(fk_organizada) {
+        var fk_organizada = sessionStorage.FK_ORGANIZADA;
+            fetch("/dados/t_independente").then(function (resposta) {
+                console.log("ESTOU NO THEN DO listar()!")
+                if (resposta.ok) {
+                    resposta.json().then(function (resposta) {
+                        console.log("Dados recebidos do usuario: ", JSON.stringify(resposta));
+
+                        id_usuario = resposta[resposta.indexOf(':') + 1]//não sei pq mas isso funciona
+                        console.log(us.fk_organizada);
+                        sessionStorage.FK_ORGANIZADA = us.fk_organizada;
+                    });
+                } else {
+                    console.log("Dados recebidos: ", JSON.stringify(resposta));
+                }
+            }).catch(function (erro) {
+                console.log(erro);
+            })
+            return false;
+        }
     
 </script>

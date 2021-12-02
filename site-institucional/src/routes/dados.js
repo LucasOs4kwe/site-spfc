@@ -7,9 +7,7 @@ router.get("/", function (req, res){
   dadosController.testar(req, res);
 });
 
-router.get("/dados_organizada", function (req, res){
-  dadosController.dados_organizada(req,res);
+router.get("/t_independente", function (req, res){
+  dadosController.t_independente(req,res);
 });
-router.get("/listar/:idUsuario", function (req, res){
-  dadosController.listar_user(req, res);
-})
+

@@ -10,7 +10,7 @@
         <script type="text/javascript" src="https://www.chartjs.org/dist/2.8.0/Chart.min.js"></script>
         <title>SPFCStats • Análises</title>
     </head>
-    <body onload="t_independente();">
+    <body onload="listar();">
         <header class="header">
             <div class="img-header">
                 <img src="../assets/img/spfc-simbolo.png" alt="">
@@ -18,7 +18,7 @@
         </header>
         <div class="navigation">
             <ul>
-                <li class="list active">
+                <li class="list">
                     <b></b>
                     <b></b>
                     <a href="dash.html">
@@ -34,7 +34,7 @@
                         <span class="title">Gráfico jogadores</span>
                     </a>
                 </li>
-                <li class="list">
+                <li class="list active">
                     <b></b>
                     <b></b>
                     <a href="posicoes.html">
@@ -78,57 +78,3 @@
     <script src="app.js"></script>
     <script src="../homepage/js/app.js"></script>
 </html>
-<script>
-
-    function t_independente() {
-            fetch("/dados/t_independente").then(function (resposta) {
-                console.log("ESTOU NO THEN DO independente()!")
-                if (resposta.ok) {
-                    resposta.json().then(function (resposta) {
-                        console.log("Dados recebidos do usuario: ", JSON.stringify(resposta));
-
-                        fk_organizada = resposta[resposta.indexOf(':') + 1]//não sei pq mas isso funciona
-                        console.log(id_usuario.usuario);
-                        sessionStorage.FK_ORGANIZADA = id_usuario.usuario;
-                    });
-                } else {
-                    console.log("Dados recebidos: ", JSON.stringify(resposta));
-                }
-            }).catch(function (erro) {
-                console.log(erro);
-            })
-            return false;
-        }
-
-        const ctx = document.getElementById('myChart').getContext('2d');
-        const myChart = new Chart(ctx, {
-            type: 'bar',
-            data: {
-                labels: ['Torcida Independente', 'Dragões da Real', 'Falange Tricolor', 'Comando Metal Tricolor', 'Pantera Tricolor', 'Caveira Tricolor', 'Coração Tricolor'],
-                datasets: [{
-                    label: 'Seguidores da organizada',
-                    data: [Number(sessionStorage.FK_ORGANIZADA)],
-                    backgroundColor: [
-                        'rgba(255, 99, 132, 0.2)',
-                        'rgba(255, 99, 132, 0.2)',
-                        'rgba(255, 99, 132, 0.2)',
-                        'rgba(255, 99, 132, 0.2)',
-                        'rgba(255, 99, 132, 0.2)',
-                        'rgba(255, 99, 132, 0.2)',
-                        'rgba(255, 99, 132, 0.2)'
-                    ],
-                    borderColor: [
-                        'rgba(255, 99, 132, 1)'
-                    ],
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                scales: {
-                    y: {
-                        beginAtZero: true
-                    }
-                }
-            }
-        });
-</script>
