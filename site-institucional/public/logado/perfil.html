@@ -39,7 +39,89 @@
     usuario.innerHTML = `Bem vindo(a), ${sessionStorage.NOME_USUARIO}`;
     Email.innerHTML = `Email: ${sessionStorage.EMAIL_USUARIO}`;
     DataNasci.innerHTML = `Data de nascimento: ${sessionStorage.DATA_NASCIMENTO}`;
-    Jogador.innerHTML = `Jogador favorito: ${sessionStorage.FK_JOGADOR}`;
+
+    // SESSIONSTORAGE PARA JOGADOR
+    if(sessionStorage.FK_JOGADOR == '1') {
+        Jogador.innerHTML = "Jogador favorito: Luciano";
+    }else if(sessionStorage.FK_JOGADOR == '2'){
+        Jogador.innerHTML = "Jogador favorito: Jonathan Calleri";
+    }else if(sessionStorage.FK_JOGADOR == '3'){
+        Jogador.innerHTML = "Jogador favorito: Éder";
+    }else if(sessionStorage.FK_JOGADOR == '4'){
+        Jogador.innerHTML = "Jogador favorito: Pablo";
+    }else if(sessionStorage.FK_JOGADOR == '5'){
+        Jogador.innerHTML = "Jogador favorito: Galeano";
+    }else if(sessionStorage.FK_JOGADOR == '6'){
+        Jogador.innerHTML = "Jogador favorito: Emiliano Rigoni";
+    }else if(sessionStorage.FK_JOGADOR == '7'){
+        Jogador.innerHTML = "Jogador favorito: Martín Benítez";
+    }else if(sessionStorage.FK_JOGADOR == '8'){
+        Jogador.innerHTML = "Jogador favorito: Igor Gomes";
+    }else if(sessionStorage.FK_JOGADOR == '9'){
+        Jogador.innerHTML = "Jogador favorito: Luan";
+    }else if(sessionStorage.FK_JOGADOR == '10'){
+        Jogador.innerHTML = "Jogador favorito: Gabriel Sara";
+    }else if(sessionStorage.FK_JOGADOR == '11'){
+        Jogador.innerHTML = "Jogador favorito: Gabriel Neves";
+    }else if(sessionStorage.FK_JOGADOR == '12'){
+        Jogador.innerHTML = "Jogador favorito: Liziero";
+    }else if(sessionStorage.FK_JOGADOR == '13'){
+        Jogador.innerHTML = "Jogador favorito: Rodrigo Nestor";
+    }else if(sessionStorage.FK_JOGADOR == '14'){
+        Jogador.innerHTML = "Jogador favorito: Vitor Bueno";
+    }else if(sessionStorage.FK_JOGADOR == '15'){
+        Jogador.innerHTML = "Jogador favorito: Shaylon";
+    }else if(sessionStorage.FK_JOGADOR == '16'){
+        Jogador.innerHTML = "Jogador favorito: Talles Costa";
+    }else if(sessionStorage.FK_JOGADOR == '17'){
+        Jogador.innerHTML = "Jogador favorito: Wellington";
+    }else if(sessionStorage.FK_JOGADOR == '18'){
+        Jogador.innerHTML = "Jogador favorito: William";
+    }else if(sessionStorage.FK_JOGADOR == '19'){
+        Jogador.innerHTML = "Jogador favorito: Miranda";
+    }else if(sessionStorage.FK_JOGADOR == '20'){
+        Jogador.innerHTML = "Jogador favorito: Robert Arboleda";
+    }else if(sessionStorage.FK_JOGADOR == '21'){
+        Jogador.innerHTML = "Jogador favorito: Reinaldo";
+    }else if(sessionStorage.FK_JOGADOR == '22'){
+        Jogador.innerHTML = "Jogador favorito: Luis Orejuela";
+    }else if(sessionStorage.FK_JOGADOR == '23'){
+        Jogador.innerHTML = "Jogador favorito: Bruno Alves";
+    }else if(sessionStorage.FK_JOGADOR == '24'){
+        Jogador.innerHTML = "Jogador favorito: Diego Costa";
+    }else if(sessionStorage.FK_JOGADOR == '25'){
+        Jogador.innerHTML = "Jogador favorito: Igor Vinícius";
+    }else if(sessionStorage.FK_JOGADOR == '26'){
+        Jogador.innerHTML = "Jogador favorito: Léo";
+    }else if(sessionStorage.FK_JOGADOR == '27'){
+        Jogador.innerHTML = "Jogador favorito: Walce";
+    }else if(sessionStorage.FK_JOGADOR == '28'){
+        Jogador.innerHTML = "Jogador favorito: Rodrigo Freitas";
+    }else if(sessionStorage.FK_JOGADOR == '29'){
+        Jogador.innerHTML = "Jogador favorito: Tiago Volpi";
+    }else if(sessionStorage.FK_JOGADOR == '30'){
+        Jogador.innerHTML = "Jogador favorito: Lucas Perri";
+    }else if(sessionStorage.FK_JOGADOR == '31'){
+        Jogador.innerHTML = "Jogador favorito: Thiago Couto";
+    }
+
+    // SESSIONSTORAGE PARA TORCIDA ORGANIZADA
+    if(sessionStorage.FK_ORGANIZADA == '1'){
+        Torcida.innerHTML = "Torcida organizada: Torcida Independente";
+    }else if(sessionStorage.FK_ORGANIZADA == '2'){
+        Torcida.innerHTML = "Torcida Organizada: Dragões da Real";
+    }else if(sessionStorage.FK_ORGANIZADA == '3'){
+        Torcida.innerHTML = "Torcida Organizada: Falange Tricolor";
+    }else if(sessionStorage.FK_ORGANIZADA == '4'){
+        Torcida.innerHTML = "Torcida Organizada: Comando Metal Tricolor";
+    }else if(sessionStorage.FK_ORGANIZADA == '5'){
+        Torcida.innerHTML = "Torcida Organizada: Pantera Tricolor";
+    }else if(sessionStorage.FK_ORGANIZADA == '6'){
+        Torcida.innerHTML = "Torcida Organizada: Caveira Tricolor";
+    }else if(sessionStorage.FK_ORGANIZADA == '7'){
+        Torcida.innerHTML = "Torcida Organizada: Coração Tricolor";
+    }
+
 
     const sair = document.getElementById('sair_a');
     sair.addEventListener('click', function(){
